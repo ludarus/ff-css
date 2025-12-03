@@ -6,6 +6,7 @@
 
 :root{
 	--urlbar-font: 'Jetbrains Mono';
+  --urlbar-size: 13px;
 }
 
 /* sync tab label and urlbar font */
@@ -21,8 +22,8 @@
 .urlbar-input,
 .textbox-input {
   font-family: var(--urlbar-font, 'monospace') !important;
-  /* font-size: var(--urlbar-size) !important;
-  font-weight: var(--urlbar-weight) !important;
+  font-size: var(--urlbar-size) !important;
+  /* font-weight: var(--urlbar-weight) !important;
   font-variant-ligatures: common-ligatures discretionary-ligatures !important;
   letter-spacing: 0 !important; */
   /* -moz-appearance: none !important; reduce browser default styling interference */
