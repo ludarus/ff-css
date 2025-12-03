@@ -1,0 +1,119 @@
+/*---+---+---+---+---+---+---+
+ | G | L | O | B | A | L |
+ +---+---+---+---+---+---+---*/
+
+:root {
+  /* Global Border Radius */
+  --uc-border-radius: 6px;
+
+  /* Distance the Statuspanel floats away from the window border */
+  --uc-status-panel-spacing: 6px;
+}
+
+/* Remove window control buttons */
+/* .titlebar-buttonbox-container { display: none !important; } */
+
+#pageActionButton {
+  display: none !important;
+}
+
+#PanelUI-menu-button {
+  padding: 8px !important;
+}
+
+#PanelUI-menu-button .toolbarbutton-badge-stack {
+  padding: 8px !important;
+}
+
+/*---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+
+ | B | O | O | K | M | A | R | S |   | T | O | O | L | B | A | R |
+ +---+---+---+---+---+---+---+---+---+---+---+---+---+---+---+---*/
+
+:root {
+  /* Position of the Personal Toolbar (0 - top, 4 - bottom) */
+  --uc-toolbar-position: 4;
+
+  /* Darken the Personal Toolbar (0-1) */
+  --uc-darken-toolbar: 0.2;
+  /* Darken by 20% in dark mode */
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --uc-darken-toolbar: 0;
+    /* No darkening in light mode */
+  }
+}
+
+/*---+---+---+---+---+---+---+
+ | U | R | L |   B | A | R |
+ +---+---+---+---+---+---+---*/
+
+:root {
+  /* Width of the URL Bar (min-width and max-width) */
+  --uc-urlbar-min-width: 15vw;
+  --uc-urlbar-max-width: 25vw;
+
+  /* Position of the URL Bar (1 - tabs on right, 3 - tabs on left) */
+  --uc-urlbar-position: 1;
+
+  /* Firefox can be wonky with vertical URL Bar placement */
+  --uc-urlbar-top-spacing: 0px;
+}
+
+/* Disable Navigation Buttons */
+/* #back-button, #forward-button { display: none !important; } */
+
+/* Disable Tracking Protection Shield */
+#tracking-protection-icon-container {
+  display: none !important;
+}
+
+/* Hide Encryption and Permissions icons */
+/* #identity-permission-box { display: none !important; } */
+/* #identity-box { display: none !important; } */
+
+/* Hide everything BUT the zoom indicator within the URL Bar */
+/* #page-action-buttons > :not(#urlbar-zoom-button) { display: none !important; } */
+
+/* Hide the Go-arrow in the URL Bar */
+#urlbar-go-button {
+  display: none !important;
+}
+
+/* Hide the Extensions Menu Icon */
+/* #unified-extensions-button { display: none !important; } */
+
+/*---+---+---+---+---+---+---+
+ | T | A | B |   B | A | R |
+ +---+---+---+---+---+---+---*/
+
+:root {
+  /* Active and Inactive Tab Widths */
+  --uc-active-tab-width: clamp(100px, 30vw, 300px);
+  --uc-inactive-tab-width: clamp(100px, 20vw, 200px);
+
+  /* Show Tab Close Button (none - hide, -moz-inline-block - show) */
+  --show-tab-close-button: none;
+
+  /* Show Tab Close Button on Tab Hover (none - hide, -moz-inline-block - show) */
+  --show-tab-close-button-hover: -moz-inline-block;
+
+  /*Set the tab position 0px is stuck the bottom */
+  --uc-tab-block-margin: 6px;
+ 
+  /*  Hide the all Tabs button from the Tab Bar (show: -moz-box, hide: none) */
+  --uc-show-all-tabs-button: -moz-box;
+
+  /* Margin of the Container Tabs Indicator */
+  --container-tabs-indicator-margin: 10px;
+
+  /* Glow added to the container indicator */
+  --uc-identity-glow: 0 1px 10px 1px;
+  /* No glow by default */
+}
+
+/* Hide the secondary Tab Label (e.g., playing indicator) */
+.tab-secondary-label {
+  display: none !important;
+}

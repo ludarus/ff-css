@@ -1,0 +1,73 @@
+@import 'includes/realfire-config.css';
+@import 'includes/realfire-colours.css'; 
+@import 'includes/realfire-layout.css';
+@import 'includes/realfire-responsive.css';
+@import 'includes/realfire-nav-bar.css';
+
+:root{
+	--urlbar-font: 'Jetbrains Mono';
+}
+
+/* sync tab label and urlbar font */
+.tab-label { 
+  font-family: var(--urlbar-font, 'monospace');
+	font-size: 13px;
+
+}
+/*urlbar font*/
+#urlbar,
+#urlbar-input,
+#navigator-toolbox #nav-bar .urlbar-input,
+.urlbar-input,
+.textbox-input {
+  font-family: var(--urlbar-font, 'monospace') !important;
+  /* font-size: var(--urlbar-size) !important;
+  font-weight: var(--urlbar-weight) !important;
+  font-variant-ligatures: common-ligatures discretionary-ligatures !important;
+  letter-spacing: 0 !important; */
+  /* -moz-appearance: none !important; reduce browser default styling interference */
+}
+
+/*removing tab scrollers*/
+
+
+#alltabs-button {
+  display: none !important;
+  visibility: collapse !important;
+  pointer-events: none !important;
+}
+.tabbrowser-tab>.tab-stack>.tab-background {
+  box-shadow: none !important;
+  border-radius: var(--uc-border-radius) !important;
+  margin-block: var(--uc-tab-block-margin) !important;
+}
+
+/* hiding close tab buttons */
+.tabbrowser-tab .tab-close-button {
+  display:none;
+}
+
+/* hiding windows buttons */
+#TabsToolbar > .titlebar-buttonbox-container,
+.titlebar-buttonbox-container,
+.titlebar-buttonbox {
+  display: none !important;
+}
+
+.container.infobar {
+  background:var(--uc-base-colour) !important;
+  border: 2px solid var(--accent-color) !important;
+  border-radius: var(--uc-border-radius) !important;
+}
+
+.container.infobar::before {
+  background-image: none !important;
+}
+
+.notificationbox-stack {
+  background: transparent !important;
+  border-radius: var(--uc-border-radius) !important;
+    position: absolute !important;
+    bottom: 0px !important;
+    width: auto !important;
+}

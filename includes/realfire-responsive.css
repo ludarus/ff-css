@@ -1,0 +1,87 @@
+@media (min-width: 1000px) {
+  #navigator-toolbox {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-end !important;
+  }
+
+  #nav-bar {
+    order: var(--uc-urlbar-position) !important;
+    width: var(--uc-urlbar-max-width) !important;
+  }
+
+  #urlbar-container {
+    padding-left: 0px;
+    width: auto !important;
+    margin-inline: 6px !important;
+    min-width: var(--uc-urlbar-min-width);
+    max-width: var(--uc-urlbar-max-width) !important;
+  }
+
+  #TabsToolbar {
+    order: 2 !important;
+  }
+
+  #PersonalToolbar {
+    width: 100% !important;
+    order: var(--uc-toolbar-position) !important;
+  }
+
+  :root:not([customizing])
+    #nav-bar
+    .customization-target
+    > :not(#urlbar-container) {
+    opacity: 0 !important;
+    width: 0px !important;
+    padding: 0px !important;
+    min-width: 0px !important;
+    transition: all 200ms !important;
+  }
+
+  :root:not([customizing])
+    #nav-bar:hover
+    .customization-target
+    > :not(#urlbar-container,#nav-bar-toolbarbutton-slider-container),
+  :root:not([customizing])
+    #nav-bar:focus-within
+    .customization-target
+    > :not(#urlbar-container,#nav-bar-toolbarbutton-slider-container) {
+    opacity: 1 !important;
+    min-width: 28px !important;
+    transition: all 200ms !important;
+  }
+
+  :root:not([customizing])
+  #nav-bar:hover
+  .customization-target
+  > #nav-bar-toolbarbutton-slider-container,
+  :root:not([customizing])
+    #nav-bar:focus-within
+    .customization-target
+    > #nav-bar-toolbarbutton-slider-container {
+    width: 100% !important;
+    opacity: 1 !important;
+    transition: all 200ms !important;
+  }
+
+  #back-button,
+  #forward-button {
+    transform: scale(1, 1) !important;
+    transition: margin-left 150ms var(--animation-easing-function),
+      transform 350ms var(--animation-easing-function) !important;
+  }
+
+  #forward-button[disabled="true"],
+  #back-button[disabled="true"] {
+    display: none;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    transform: scale(0.6, 0.6) !important;
+  }
+
+  #navigator-toolbox:focus-within #titlebar {
+    width: auto !important;
+    min-width: calc(100vw - var(--uc-urlbar-max-width) - 1px);
+  }
+}

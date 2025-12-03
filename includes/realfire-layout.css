@@ -1,0 +1,42 @@
+#nav-bar,
+#TabsToolbar,
+#main-window,
+#sidebar-box,
+#PersonalToolbar,
+#toolbar-menubar,
+#navigator-toolbox {
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* remove "padding" left and right from tabs */
+.titlebar-spacer {
+  display: none !important;
+}
+
+/*de bloat*/
+#star-button,
+#star-button-box,
+toolbarbutton#star-button,
+#bookmarks-button,
+#bookmarks-menu-button,
+[aria-label="Bookmark This Page"],
+[title="Bookmark This Page"] {
+  display: none !important;
+}
+/* 1) Hide URL-bar zoom / reset button (newer Firefox builds) */
+#urlbar-zoom-button,
+.urlbar-zoom-button {
+  display: none !important;
+}
+
+/* 3) Hide page-action menu/sep (if exists) to avoid empty space or separator glitches */
+#pageActionSeparator {
+  display: none !important;
+}
+
+
+#statuspanel #statuspanel-label {
+  border: none !important;
+  border-radius: var(--uc-border-radius) !important;
+}

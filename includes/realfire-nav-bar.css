@@ -1,0 +1,95 @@
+#navigator-toolbox:not(:-moz-lwtheme),
+.sidebar-panel:not(:-moz-lwtheme) {
+  background: var(--uc-base-colour) !important;
+}
+
+
+/* 1) Hide the site identity / lock / info icon and its labels */
+#identity-box,
+#identity-box #identity-icon,
+#identity-box #identity-icon-labels {
+  display: none !important;
+}
+
+/* 2) Hide page-action / permission / site-info / extra icons on the right side of URL bar */
+#page-action-buttons,
+#page-action-buttons > *,
+.urlbar-page-action,
+.urlbar-popup-notification-icon-container,
+#pageActionButton,
+#pageActionButton-container,
+#tracking-protection-icon-container,
+#urlbar-popup-notification-icon-container {
+  display: none !important;
+}
+
+/* 3) Optional: collapse space so you get maximum URL space */
+#urlbar[pageproxystate],
+#navigator-toolbox toolbar:not([customizing]) #urlbar {
+  padding-inline-start: 0 !important;
+  margin-inline-start: 0 !important;
+}
+#nav-bar {
+  font-family: var('Jetbrains Mono', 'monospace');
+  padding-block-start: 0px !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+#nav-bar-toolbarbutton-slider-container {
+  max-width: 64px !important;
+}
+
+::-moz-selection {
+  background-color: var(--accent-color) !important;
+}
+
+
+
+#urlbar #identity-box.notSecureText #identity-icon-box {
+  margin-inline-start: initial !important;
+  opacity: 1 !important;
+  color: #e36f6f !important;
+}
+
+
+#urlbar-background {
+  border: transparent !important;
+}
+
+#urlbar[focused="true"]>#urlbar-background,
+#urlbar:not([open])>#urlbar-background {
+  background: var(--uc-base-colour) !important;
+}
+
+#urlbar[open]>#urlbar-background {
+  background: var(--uc-base-colour) !important;
+}
+
+.urlbarView-row:hover>.urlbarView-row-inner,
+.urlbarView-row[selected]>.urlbarView-row-inner {
+  background: var(--toolbar-field-focus-background-color) !important;
+  color: var(--uc-inverted-colour) !important;
+}
+
+.urlbarView-url {
+  color: var(--accent-color) !important;
+}
+
+.urlbar-icon,
+#urlbar-go-button {
+  margin: auto;
+}
+
+.urlbar-icon[starred='true'] {
+  fill: var(--accent-color) !important;
+}
+
+.urlbar-page-action {
+  padding: 0 inherit !important;
+}
+
+#toolbar-menubar {
+  min-width: 100% !important;
+}

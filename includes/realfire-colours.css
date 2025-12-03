@@ -1,0 +1,74 @@
+/* ---+---+---+---+---+---+---+
+   | C | O | L | O | U | R | S |
+   +---+---+---+---+---+---+---+ */
+
+/* Dark Mode Color Scheme */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --uc-identity-colour-red: #fc5c65;
+    --uc-identity-colour-pink: #f78fb3;
+    --uc-identity-colour-blue: #0078d7;
+    --uc-identity-colour-green: #b8e994;
+    --uc-identity-colour-purple: #786fa6;
+    --uc-identity-colour-yellow: #f7d794;
+    --uc-identity-colour-orange: #f19066;
+    --uc-identity-colour-turquoise: #55e6c1;
+
+    --uc-base-colour: #000000;
+    --uc-muted-colour: #c3c3c3;
+    --uc-inverted-colour: #fafafc;
+    --uc-highlight-colour: #191b1c;
+    --uc-accent-colour: AccentColor;
+  }
+}
+
+
+
+/* Variables for UI Density */
+:root[uidensity="compact"] {
+  --sidebar-menupopup-height: 29px;
+}
+
+:root[uidensity="touch"] {
+  --sidebar-menupopup-height: 41px;
+}
+
+/* General UI Variables */
+:root {
+  --tab-radius: 8px;
+  --navbar-percent: 32vw;
+  --tab-border-width: 2px;
+  --toolbar-percent: 68vw;
+  --sidebar-menupopup-height: 36px;
+  --subview-height: var(--tab-min-height);
+  --bookmark-block-padding: 1px;
+  --menupopup-height: var(--tab-min-height);
+  --navbar-margin-top: calc(0px - var(--tab-min-height));
+  --toolbarbutton-inner-padding: 6px;
+  --toolbarbutton-outer-padding: 3px;
+  --urlbar-icon-padding: 0px;
+  --urlbar-min-height: calc(var(--tab-min-height) - 3px);
+
+  /* Colors */
+  --accent-color: var(--uc-accent-colour);
+  --settings-color: var(--uc-accent-colour);
+  --button-text-white: #ffffff;
+  --accent-field-color: color-mix(in srgb, field 70%, var(--accent-color));
+  --accent-hover-color: color-mix(in srgb, var(--accent-color) 90%, var(--uc-inverted-colour) 20%);
+  
+  /* Light-weight Themes (LWT) */
+  --lwt-frame: var(--uc-base-colour);
+  --lwt-text-color: var(--uc-inverted-colour);
+  --toolbar-field-color: var(--uc-inverted-colour);
+  --toolbar-field-focus-border-color: transparent;
+  --toolbar-field-focus-color: var(--uc-inverted-colour);
+  --urlbar-popup-url-color: var(--uc-accent-colour);
+  --lwt-toolbar-field-highlight: var(--uc-inverted-colour);
+  --lwt-tab-text: var(--lwt-text-colour);
+  --toolbar-color: var(--lwt-text-color);
+  --toolbarseparator-color: var(--uc-accent-colour);
+  --toolbarbutton-active-background: var(--toolbarbutton-hover-background);
+  --sidebar-background-color: var(--lwt-sidebar-background-color);
+  --urlbar-box-text-color: var(--uc-muted-colour);
+  --urlbar-box-hover-text-color: var(--uc-inverted-colour);
+}
