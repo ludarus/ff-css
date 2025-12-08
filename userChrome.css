@@ -29,8 +29,21 @@
   /* -moz-appearance: none !important; reduce browser default styling interference */
 }
 
-/*removing tab scrollers*/
-
+/*removing bottom left thingy */
+#statuspanel,
+#statuspanel-box,
+.statuspanel,
+#webext-statuspanel,
+#web-statuspanel,
+#statusPanel,
+[anonid="statusPanel"],
+#statuspanel-label,
+#statuspanel-text,
+#statuspanel-description {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
 
 #alltabs-button {
   display: none !important;
